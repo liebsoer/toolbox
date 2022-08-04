@@ -1,5 +1,6 @@
 {
   "conventionalCommits.scopes": [
-    "gherkin-tools"
+    "gherkin-tools",
+    "nx cloud"
   ]
 }
