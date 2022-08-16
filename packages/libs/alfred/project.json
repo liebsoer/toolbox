@@ -24,7 +24,7 @@
     "test": {
       "executor": "nx:run-commands",
       "options": {
-        "commands": ["cucumber-js"],
+        "commands": [],
         "cwd": "packages/libs/alfred"
       }
     },
