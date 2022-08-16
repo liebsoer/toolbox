@@ -16,7 +16,7 @@ jobs:
     with:
       number-of-agents: 3
       install-commands: |
-        pnpm store prune
+        pnpm install
         pnpm install -r
       parallel-commands: |
         pnpm exec nx-cloud record -- pnpm exec nx workspace-lint
