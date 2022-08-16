@@ -1,0 +1,33 @@
+{
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/libs/alfred/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/libs/alfred",
+        "tsConfig": "packages/libs/alfred/tsconfig.lib.json",
+        "packageJson": "packages/libs/alfred/package.json",
+        "main": "packages/libs/alfred/src/index.ts",
+        "assets": ["packages/libs/alfred/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["packages/libs/alfred/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "nx:run-commands",
+      "options": {
+        "commands": ["cucumber-js"],
+        "cwd": "packages/libs/alfred"
+      }
+    }
+  },
+  "tags": ["alfred", "lib"]
+}
