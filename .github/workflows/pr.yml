@@ -1,14 +1,10 @@
 name: CI
 
 on:
-  push:
+  pull_request:
     branches:
-      - main
       - develop
-      - 'release/**'
-      - 'feature/**'
-      - 'hotfix/**'
-      - 'support/**'
+    types: [ opened, reopened, synchronize ]
 jobs:
   main:
     name: Nx Cloud - Main Job
@@ -28,11 +24,3 @@ jobs:
     uses: nrwl/ci/.github/workflows/nx-cloud-agents.yml@v0.6
     with:
       number-of-agents: 3
-
-  final:
-    name: Final Job
-    needs: [main, agents]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Print line
-        run: ls

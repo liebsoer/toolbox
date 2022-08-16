@@ -27,6 +27,15 @@
         "commands": ["cucumber-js"],
         "cwd": "packages/libs/alfred"
       }
+    },
+    "deploy": {
+      "executor": "ngx-deploy-npm:deploy",
+      "options": {
+        "access": "public",
+        "tag": "alpha",
+        "packageVersion": "0.0.1-alpha1",
+        "dryRun": true
+      }
     }
   },
   "tags": ["alfred", "lib"]
