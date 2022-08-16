@@ -38,4 +38,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print line
-        run: ls
+        run: echo `pwd`
