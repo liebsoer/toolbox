@@ -2,7 +2,6 @@ import { ItemData, ItemMod } from '../interfaces';
 import { IconType, ItemModType } from '../types';
 import { removeEmptyProperties } from '../utils';
 import ItemFeedback from '../interfaces/item-feedback.interface';
-import { ICONS } from '../constants';
 
 export default class Item implements ItemData {
   uid = '';

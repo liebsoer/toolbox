@@ -10,7 +10,7 @@ export default class ActionHandler {
   /**
    * Register action handler
    */
-  onAction(action: string, handler: (...args: any[]) => void) {
+  onAction(action: string, handler: (...args: unknown[]) => void) {
     if (!action || !handler) {
       return;
     }
@@ -20,7 +20,7 @@ export default class ActionHandler {
   /**
    * Register menu item selected handler
    */
-  onMenuItemSelected(action: string, handler: (...args: any[]) => void) {
+  onMenuItemSelected(action: string, handler: (...args: unknown[]) => void) {
     if (!action || !handler) {
       return;
     }

@@ -15,6 +15,7 @@ jobs:
     uses: nrwl/ci/.github/workflows/nx-cloud-main.yml@v0.6
     with:
       number-of-agents: 3
+      install-commands: 'pnpm install -r --frozen-lockfile'
       parallel-commands: |
         pnpm exec nx-cloud record -- pnpm exec nx workspace-lint
         pnpm exec nx-cloud record -- pnpm exec nx format:check
